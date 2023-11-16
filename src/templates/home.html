@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block miCSS %}
+<link rel="stylesheet" href="{{ url_for('static', filename='../static/css/login.css') }}">
+{% endblock %}
+
+{% block titulo %}Home{% endblock %}
+
+{% block cuerpo %}
+<h1>Bienvenido</h1>
+<h1>{{ current_user.fullname }}</h1>
+
+<a class="btn btn-danger" href="{{ url_for('logout') }}" onclick="logOut()">LogOut</a>
+
+{% endblock %}
+
+{% with messages = get_flashed_messages() %}
+ {% if messages %}
+ <ul>
+ {% for message in messages %}
+ <li class="alert alert-warning">{{ message }}</li>
+ <a class="btn btn-danger" href="{{ url_for('logout') }}" >LogOut</a>
+
+ {% endfor %}
+ </ul>
+ {% endif %}
+ {% endwith %}
+
