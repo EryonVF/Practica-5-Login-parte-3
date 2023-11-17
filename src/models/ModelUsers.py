@@ -16,7 +16,7 @@ class ModelUsers:
             cursor.execute("call sp_verifyIdentity(%s, %s)", (user.username, user.password))
             row = cursor.fetchone()
             if row and len(row) >= 5:
-                user = User(row[0], row[1], row[2], row[4], row[3])
+                user = User(row[0], row[1], row[2], row[3], row[4])
                 return user
             else:
                 return None
