@@ -1,5 +1,5 @@
 ## Sesiones en Flask
-
+.
 En el contexto del desarrollo web, una sesión en Flask es una forma de almacenar información del usuario de manera persistente entre diferentes solicitudes HTTP durante la visita de un usuario a un sitio web. Las sesiones permiten recordar información específica del usuario mientras navegan entre páginas o realizan acciones en el sitio.
 
 ### Identificación del Usuario
